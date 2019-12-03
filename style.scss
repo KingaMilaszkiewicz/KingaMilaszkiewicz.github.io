@@ -1,0 +1,180 @@
+/* Global */
+
+$color-main: #ED4C67;
+$color-logo: #FFFFFF;
+$font-text: 'Karla', sans-serif;
+$font-header: 'Rubik', sans-serif;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    background: #fff;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: $font-text;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 108px 0;
+}
+
+.section-title {
+    font-family: $font-header;
+    color: #fff;
+    position: relative;
+    font-size: 36px;
+    margin: 0 0 60px 0;
+}
+
+.section-title::after {
+    position: absolute;
+    content: '';
+    bottom: -12px;
+    left: 50%;
+    width: 140px;
+    height: 10px;
+    transform: translateX(-50%);
+    background: $color-main;
+}
+
+/* Splash */
+
+.splash {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url(https://i.postimg.cc/ydkmPRYr/abstract-burn-burnt-conceptual-604671.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.splash-inner {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.splash i {
+    font-size: 50px;
+    background: $color-main;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    color: $color-logo;
+    border-radius: 50%;
+}
+
+.page-title {
+    color: #fff;
+    font-size: 60px;
+    margin: 48px 0 0 0;
+    position: relative;
+    font-family: $font-header;
+}
+
+.page-title::after {
+    position: absolute;
+    content: '';
+    bottom: -24px;
+    left: 50%;
+    width: 500px;
+    height: 10px;
+    transform: translateX(-50%);
+    background: $color-main;
+}
+
+.page-subtitle {
+    margin: 48px 0 0 0;
+    font-size: 25px;
+    color: #fff;
+    font-family: $font-text;
+}
+
+/* Intro */
+
+.intro {
+    background: #d6d6d6;
+}
+
+.intro p {
+    font-family: $font-text;
+    width: 80%;
+    margin: 0 auto;
+    padding: 48px 0;
+    font-size: 24px;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+}
+
+/* About */
+
+.about {
+    font-family: $font-text;
+    color: #fff;
+    background: #3c3c3c;
+}
+
+/* Skills*/
+
+.skills {
+    background: #d6d6d6;
+}
+
+.skills ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skills ul li {
+    position:relative;
+}
+
+.skill-image {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.skill-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s;
+}
+
+.skill.right .skill-image { /*select all elements in a class "skill-image", which is inside element with classes "skill" and "right"*/
+    right: 0;
+}
+
+.skill.right .skill-description {
+    padding: 36px 55% 36px 0;
+    text-align: right;
+}
+
+.skill.left .skill-description {
+    padding: 36px 0 36px 55%;
+    text-align: left;
+}
+
+.skills .section-title {
+    color: #000;
+}
+
+.skill-image img:hover {
+    transform: scale(1.2);
+}
